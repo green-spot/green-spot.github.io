@@ -169,7 +169,8 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 		text-align: center;
 	}
 	.logo img {
-		width: 350px;
+    width: calc(100% - 60px);
+		max-width: 350px;
 	}
 	section {
 	}
@@ -276,8 +277,40 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 		font-weight: 300;
 	}
   @media screen and (max-width: 750px) {
-    .features dl dt {
-      font-size: 20px;
+    .logo {
+  		padding: 100px 0;
+  	}
+  	section + section {
+	  	margin-top: 60px;
+  	}
+  	section .body {
+  		margin-top: 30px;
+  	}
+    .services details:first-child {
+  		margin-top: 30px;
+  	}
+  	.services details summary {
+      padding: 15px 60px 15px 25px;
+      font-size: 16px;
+      line-height: 28px;
+	  }
+  	.features dl dt {
+  		font-size: 18px;
+    }
+    .features dl dt:not(:first-child) {
+      margin-top: 30px;
+    }
+    .information dl {
+  		margin: 30px 0 0;
+  	}
+    .information dl div {
+      width: 100%;
+    }
+    .information dl div dt {
+      width: 120px;
+    }
+    .information dl div dd {
+      width: calc(100% - 120px);
     }
   }
 </style>
