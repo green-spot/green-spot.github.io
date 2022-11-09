@@ -1,0 +1,68 @@
+<form>
+  <dl>
+    <dt><label for="name-input">お名前</label></dt>
+    <dd><input type="text" name="name" id="name-input" required></dd>
+    <dt><label for="email-input">メールアドレス</label></dt>
+    <dd><input type="email" name="email" id="email-input" required></dd>
+    <dt><label for="message-textarea">お問い合わせ内容</label></dt>
+    <dd><textarea name="message" id="message-textarea" required></textarea></dd>
+  </dl>
+
+  <div class="button">
+    <button type="submit" onclick="alert('準備中です。'); return false;">送信する</button>
+  </div>
+</form>
+
+<style>
+  dl {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  dl dt {
+    color: #000;
+    font-weight: normal;
+  }
+
+  dl dt:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  dl dd {
+    margin-top: 5px;
+  }
+
+  dl dd input,
+  dl dd textarea {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #888;
+    border-radius: 3px;
+    background-color: #f8f8f8;
+  }
+
+  dl dd textarea {
+    height: 160px;
+    padding: 10px 15px;
+  }
+
+  .button {
+    margin: 40px 0 0;
+    text-align: center;
+  }
+
+  .button button {
+    width: 240px;
+    height: 50px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 18px;
+    background-color: var(--main-color-dark);
+    transition: background-color 200ms;
+  }
+
+  .button button:hover {
+    background-color: var(--main-color)
+  }
+</style>

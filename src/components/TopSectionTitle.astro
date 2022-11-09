@@ -1,0 +1,44 @@
+---
+import Icon from "./Icon.astro";
+
+const { titleEn, titleJp } = Astro.props;
+---
+
+<h2 class="animate">
+  <span>{titleEn}</span>
+  <div class="icon"><Icon style="margin:12px auto 15px;"></Icon></div>
+  <span>{titleJp}</span>
+</h2>
+
+<style>
+  h2 {
+    text-align: center;
+  }
+  h2 span:first-child {
+    display: block;
+    color: var(--main-color);
+    font-size: 20px;
+    line-height: 1em;
+    opacity: 0;
+    transform: translate(0, 10px);
+    transition: opacity 200ms, transform 200ms;
+  }
+  h2[data-scrolled] span:first-child {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  h2 .icon {
+    transition: transform 400ms;
+    transform: rotateY(180deg);
+    transform-origin: center;
+  }
+  h2[data-scrolled] .icon {
+    transform: rotateY(360deg);
+  }
+  h2 span:last-child {
+    display: block;
+    color: #000;
+    font-size: 30px;
+    line-height: 1em;
+  }
+</style>

@@ -1,0 +1,291 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import TopSectionTitle from '../components/TopSectionTitle.astro';
+import InquiryForm from '../components/InquiryForm.astro';
+import Icon from '../components/Icon.astro';
+import GrayScaleIcon from '../components/GrayScaleIcon.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title="green spot" description="WordPress開発、ヘッドレスCMSやReactを使ったSPAなど、流行りの技術に対応します。" />
+	</head>
+	<body>
+		<Header />
+
+		<main>
+			<div class="logo">
+				<img src="/assets/images/logo.svg" alt="green spot">
+			</div>
+
+			<section id="services" class="services">
+				<TopSectionTitle titleEn="Services" titleJp="green spotが提供できること" />
+
+				<div class="body">
+					<p><strong>green spot</strong>は、現在大阪に住むWebエンジニアの運営するサイト、サービスです。これまで15年以上にわたってWeb制作業界で働いており、2022年末に独立してフリーランスとして活動しています。</p>
+
+					<details>
+						<summary>
+							<strong>HTML/CSSのコーディングの質</strong>でお困りではありませんか？
+							<div><Icon></Icon></div>
+						</summary>
+						<div>
+							<p>ディレクター、デザイナー、エンジニア、そしてお客様。それぞれの目線で、重視する質というものは様々です。green spotの考える<strong>質の高さ</strong>については、このページの<a href="#features">意識していること</a>にまとめていますので、もしあなたの価値観と合いそうでしたら、ぜひ制作のお手伝いをさせてください。</p>
+						</div>
+					</details>
+
+					<details>
+						<summary>
+  						<strong>ヘッドレスCMSでの運営</strong>や<strong>SPAの制作</strong>を検討していますか？
+							<div><Icon></Icon></div>
+            </summary>
+            <div>
+							<p>Reactなどのフロントエンドフレームワークや、microCMSやNewtに代表されるヘッドレスCMSなど、Web制作の手法は多様に広がり、こういった技術はこれから先も確実に伸び続けていくことが予想されます。<br aria-hidden="true">green spotでは、これら最新の技術を使った制作はもちろん、<strong>WordPressをヘッドレスCMSとして使ったサイト</strong>や、<strong>独自のフレームワークを使った、PHPで動作するSPA</strong>の制作も可能です。</p>
+						</div>
+          </details>
+
+          <details>
+            <summary>
+							<strong>WordPressのカスタマイズ</strong>にお困りではありませんか？
+							<div><Icon></Icon></div>
+            </summary>
+            <div>
+							<ul>
+								<li>ACFを使った複雑なコンテンツ設計</li>
+								<li>会員制サイト</li>
+								<li>メールフォームの組み込み</li>
+							</ul>
+							<p>まずご要望をお聞きして、最適な解決策を提案いたします。データベースや既存のAPIを使用したものなど、サイトに合わせたオリジナルのプラグインを開発することも可能です。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+							複雑な<strong>JavaScriptアプリケーション制作</strong>のご依頼先はありますか？
+							<div><Icon></Icon></div>
+            </summary>
+            <div>
+							<dd>
+								<ul>
+									<li>料金シミュレーション</li>
+									<li>見積もり計算ができるお問い合わせフォーム</li>
+									<li>デジタルサイネージ用アプリケーション</li>
+									<li>Chart.jsを用いたグラフ生成</li>
+								</ul>
+								<p>これまで、数多くのJavaScriptアプリケーションの制作に携わってきました。ブラウザで完結するものだけでなく、フォームやCMSと連携するものも承っています。もちろん、サーバサイドの開発も対応可能です。</p>
+							</dd>
+						</div>
+          </details>
+
+          <details>
+            <summary>
+							<strong>新しいIT技術</strong>を導入する予定はありませんか？
+							<div><Icon></Icon></div>
+            </summary>
+            <div>
+							<p>御社のニーズに合わせた導入支援やアドバイスが可能です。Webに限らずIT支援のご相談を承っています。</p>
+            </div>
+          </details>
+        </div>
+			</section>
+
+			<section id="features" class="features">
+				<TopSectionTitle titleEn="Features" titleJp="意識していること" />
+
+				<div class="body">
+					<dl>
+						<dt><span class="animate"><GrayScaleIcon /></span> 保守性の高いコーディング</dt>
+						<dd>
+							<p>納品してそれで終わり、という視点はなく、保守性を維持するために<strong>シンプルさ・矛盾のない構造化</strong>を常に意識してコーディングをしています。人によっては、仕様通り動けばそれでいい、制作のスピードが大切という考えもあるかと思います。私は、仕様通りの動作も迅速さも当然のこととして、<strong>その上で質を担保でき、悩むことができる</strong>エンジニアが優れていると考えています。</p>
+						</dd>
+						<dt><span class="animate"><GrayScaleIcon /></span> 一つ一つ、意味を考える</dt>
+						<dd>
+							<p>開発において、決して少なくない割合を占めるのが名前をつける作業です。たとえばファイル名、変数名であったり、HTML/CSSのクラス名・ID名もそうです。何かに名前をつけるということは、<strong>その本質を考えること</strong>につながります。どんなに些細な箇所でも、それらをないがしろにしないことで、一貫性と矛盾のなさが生まれ、質の高いものに仕上がります。</p>
+						</dd>
+						<dt><span class="animate"><GrayScaleIcon /></span> あたらしい技術を積極的に導入する</dt>
+						<dd>
+							<p>昔の常識がすぐに覆る世界ですので、<strong>知識のアップデート</strong>と、<strong>新しい技術を身に付けること</strong>を大切にしています。ただし、お客様の理解の妨げになるような技術の選定は望ましくありません。ヒアリングをした後にバランスを取ることもあり、黎明期からWebの世界を見ていたからこそできる対応もあります。</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+
+			<section id="information" class="information">
+				<TopSectionTitle titleEn="Information" titleJp="このサイトの運営者について" />
+
+				<div class="body">
+					<dl>
+						<div>
+							<dt>性別</dt>
+							<dd>男</dd>
+						</div>
+						<div>
+							<dt>生年月日</dt>
+							<dd>1985/7/30</dd>
+						</div>
+						<div>
+							<dt>できること</dt>
+							<dd>プログラミング</dd>
+						</div>
+						<div>
+							<dt>好きなもの</dt>
+							<dd>お酒、おいしい料理</dd>
+						</div>
+						<div>
+							<dt>好きなこと</dt>
+							<dd>温泉、ハイキング</dd>
+						</div>
+            <div>
+              <dt>好きないろ</dt>
+              <dd>緑</dd>
+            </div>
+					</dl>
+				</div>
+			</section>
+
+			<section id="inquiry" class="inquiry">
+				<TopSectionTitle titleEn="Inquiry" titleJp="お問い合わせ" />
+
+				<div class="body">
+					<p style="text-align: center;">案件のご相談や制作物に対するご質問など、お気軽にお問い合わせください。</p>
+
+					<div style="margin-top: 40px;">
+						<InquiryForm />
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.logo {
+		padding: 200px 0;
+		text-align: center;
+	}
+	.logo img {
+		width: 350px;
+	}
+	section {
+	}
+	section + section {
+		margin-top: 100px;
+	}
+	section .body {
+		margin-top: 50px;
+	}
+  .services details {
+    margin-top: 30px;
+  }
+  .services details:first-child {
+		margin-top: 40px;
+	}
+	.services details summary {
+    display: block;
+		position: relative;
+		padding: 15px 70px 15px 25px;
+		border-radius: 12px;
+		border-top-right-radius: 0;
+		color: var(--main-color);
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+		cursor: pointer;
+		background-color: rgba(12, 113, 57, .15);
+		transition: background-color 200ms;
+	}
+	.services details summary:hover {
+		background-color: rgba(12, 113, 57, .1);
+	}
+	.services details summary div {
+		position: absolute;
+		top: 18px;
+		right: 20px;
+		width: 24px;
+		height: 24px;
+		opacity: .5;
+		transition: opacity 400ms;
+		transform-origin: center;
+	}
+	.services details > div {
+    padding: 20px 5px 30px;
+    opacity: 0;
+    transform: scale(0.99);
+    transform-origin: center;
+    transition: opacity 600ms, transform 200ms;
+	}
+	.services details > div ul {
+		margin-bottom: 20px;
+	}
+	.services details > div ul li {
+		list-style: disc;
+		margin-left: 20px;
+	}
+	.services details[open] summary div {
+		opacity: 1;
+		transform: rotate(360deg);
+		transition: opacity 400ms, transform 400ms;
+	}
+  .services details[open] > div {
+    opacity: 1;
+    transform: scale(1);
+  }
+	.features dl dt {
+		color: #000;
+		font-size: 24px;
+		font-weight: normal;
+		line-height: 24px;
+	}
+	.features dl dt:not(:first-child) {
+		margin-top: 50px;
+	}
+  .features dl dt span {
+    display: inline-block;
+    transition: transform 400ms;
+    transform: rotateY(180deg);
+    transform-origin: center;
+  }
+  .features dl dt span[data-scrolled] {
+    transform: rotateY(360deg);
+  }
+	.features dl dd {
+		margin-top: 20px;
+	}
+	.information dl {
+		margin: 40px 0 0;
+	}
+  .information dl div {
+		display: flex;
+		width: 400px;
+		margin: 0 auto;
+		padding: 10px 0;
+		border-bottom: 1px solid #ddd;
+	}
+	.information dl div dt {
+		width: 150px;
+		padding: 0 0 0 10px;
+		font-weight: normal;
+	}
+	.information dl div dd {
+		width: calc(100% - 150px);
+		font-weight: 300;
+	}
+  @media screen and (max-width: 750px) {
+    .features dl dt {
+      font-size: 20px;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll(".services dl div dt").forEach(dt => {
+		dt.addEventListener("click", () => {
+			if(dt.parentElement !== null) dt.parentElement.classList.toggle("opened");
+		});
+	});
+</script>
