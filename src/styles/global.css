@@ -477,8 +477,7 @@ main {
 
 @media screen and (max-width: 750px) {
 	body {
-		font-size: 14px;
-		line-height: 1.75em;
+		line-height: 1.8em;
 	}
 
 	p + p {

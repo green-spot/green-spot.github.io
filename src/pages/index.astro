@@ -100,7 +100,7 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
             <div class="animate">
               <dt><span class="icon"><GrayScaleIcon /></span> <span>保守性の高いコーディング</span></dt>
               <dd>
-                <p>納品してそれで終わり、という視点はなく、保守性を維持するために<strong>シンプルさ・矛盾のない構造化</strong>を常に意識してコーディングをしています。人によっては、仕様通り動けばそれでいい、制作のスピードが大切という考えもあるかと思います。私は、仕様通りの動作も迅速さも当然のこととして、<strong>その上で質を担保でき、悩むことができる</strong>エンジニアが優れていると考えています。</p>
+                <p>納品してそれで終わり、という視点はなく、保守性を維持するために<strong>シンプルさ・矛盾のない構造化</strong>を常に意識してコーディングをしています。人によっては、<i>仕様通り動けばそれでいい、制作のスピードが大切</i>という考えもあるかと思います。私は、仕様通りの動作も迅速さも当然のこととして、<strong>その上で質を担保でき、悩むことができる</strong>エンジニアが優れていると考えています。</p>
               </dd>
             </div>
             <div class="animate">
@@ -152,9 +152,9 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 				<TopSectionTitle titleEn="Inquiry" titleJp="お問い合わせ" />
 
 				<div class="body">
-					<p style="text-align: center;">案件のご相談や制作物に対するご質問など、お気軽にお問い合わせください。</p>
+					<p>案件のご相談や制作物に対するご質問など、お気軽にお問い合わせください。</p>
 
-					<div style="margin-top: 40px;">
+					<div>
 						<InquiryForm />
 					</div>
 				</div>
@@ -284,6 +284,12 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 		width: calc(100% - 150px);
 		font-weight: 300;
 	}
+  .inquiry .body > p {
+    text-align: center;
+  }
+  .inquiry .body > div {
+    margin-top: 40px;
+  }
   @media screen and (max-width: 750px) {
     .logo {
   		padding: 100px 0;
