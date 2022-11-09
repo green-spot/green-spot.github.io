@@ -114,6 +114,7 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
               <dd>
                 <p>昔の常識がすぐに覆る世界ですので、<strong>知識のアップデート</strong>と、<strong>新しい技術を身に付けること</strong>を大切にしています。ただし、お客様の理解の妨げになるような技術の選定は望ましくありません。ヒアリングをした後にバランスを取ることもあり、黎明期からWebの世界を見ていたからこそできる対応もあります。</p>
               </dd>
+            </div>
 					</dl>
 				</div>
 			</section>
@@ -241,6 +242,9 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
     opacity: 1;
     transform: scale(1);
   }
+	.features dl div:not(:first-child) {
+		margin-top: 50px;
+	}
 	.features dl dt {
 		color: #000;
 		font-size: 24px;
@@ -248,9 +252,6 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 		line-height: 24px;
     -webkit-perspective: 500px;
     perspective: 500px;
-	}
-	.features dl dt:not(:first-child) {
-		margin-top: 50px;
 	}
   .features dl dt .icon {
     display: inline-block;
@@ -302,11 +303,11 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
       font-size: 16px;
       line-height: 28px;
 	  }
+    .features dl div:not(:first-child) {
+      margin-top: 30px;
+    }
   	.features dl dt {
   		font-size: 18px;
-    }
-    .features dl dt:not(:first-child) {
-      margin-top: 30px;
     }
     .information dl {
   		margin: 30px 0 0;
