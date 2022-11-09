@@ -144,10 +144,6 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 							<dt>好きなこと</dt>
 							<dd>温泉、ハイキング</dd>
 						</div>
-            <div>
-              <dt>好きないろ</dt>
-              <dd>緑</dd>
-            </div>
 					</dl>
 				</div>
 			</section>
@@ -206,6 +202,9 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 		background-color: rgba(12, 113, 57, .15);
 		transition: background-color 200ms;
 	}
+  .services details summary::-webkit-details-marker {
+    display: none;
+  }
 	.services details summary:hover {
 		background-color: rgba(12, 113, 57, .1);
 	}
