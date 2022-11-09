@@ -97,18 +97,23 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 
 				<div class="body">
 					<dl>
-						<dt><span class="animate"><GrayScaleIcon /></span> 保守性の高いコーディング</dt>
-						<dd>
-							<p>納品してそれで終わり、という視点はなく、保守性を維持するために<strong>シンプルさ・矛盾のない構造化</strong>を常に意識してコーディングをしています。人によっては、仕様通り動けばそれでいい、制作のスピードが大切という考えもあるかと思います。私は、仕様通りの動作も迅速さも当然のこととして、<strong>その上で質を担保でき、悩むことができる</strong>エンジニアが優れていると考えています。</p>
-						</dd>
-						<dt><span class="animate"><GrayScaleIcon /></span> 一つ一つ、意味を考える</dt>
-						<dd>
-							<p>開発において、決して少なくない割合を占めるのが名前をつける作業です。たとえばファイル名、変数名であったり、HTML/CSSのクラス名・ID名もそうです。何かに名前をつけるということは、<strong>その本質を考えること</strong>につながります。どんなに些細な箇所でも、それらをないがしろにしないことで、一貫性と矛盾のなさが生まれ、質の高いものに仕上がります。</p>
-						</dd>
-						<dt><span class="animate"><GrayScaleIcon /></span> あたらしい技術を積極的に導入する</dt>
-						<dd>
-							<p>昔の常識がすぐに覆る世界ですので、<strong>知識のアップデート</strong>と、<strong>新しい技術を身に付けること</strong>を大切にしています。ただし、お客様の理解の妨げになるような技術の選定は望ましくありません。ヒアリングをした後にバランスを取ることもあり、黎明期からWebの世界を見ていたからこそできる対応もあります。</p>
-						</dd>
+            <div class="animate">
+              <dt><span class="icon"><GrayScaleIcon /></span> <span>保守性の高いコーディング</span></dt>
+              <dd>
+                <p>納品してそれで終わり、という視点はなく、保守性を維持するために<strong>シンプルさ・矛盾のない構造化</strong>を常に意識してコーディングをしています。人によっては、仕様通り動けばそれでいい、制作のスピードが大切という考えもあるかと思います。私は、仕様通りの動作も迅速さも当然のこととして、<strong>その上で質を担保でき、悩むことができる</strong>エンジニアが優れていると考えています。</p>
+              </dd>
+            </div>
+            <div class="animate">
+              <dt><span class="icon"><GrayScaleIcon /></span> <span>一つ一つ、意味を考える</span></dt>
+              <dd>
+                <p>開発において、決して少なくない割合を占めるのが名前をつける作業です。たとえばファイル名、変数名であったり、HTML/CSSのクラス名・ID名もそうです。何かに名前をつけるということは、<strong>その本質を考えること</strong>につながります。どんなに些細な箇所でも、それらをないがしろにしないことで、一貫性と矛盾のなさが生まれ、質の高いものに仕上がります。</p>
+              </dd>
+            </div>
+            <div class="animate">
+              <dt><span class="icon"><GrayScaleIcon /></span> <span>あたらしい技術を積極的に導入する</span></dt>
+              <dd>
+                <p>昔の常識がすぐに覆る世界ですので、<strong>知識のアップデート</strong>と、<strong>新しい技術を身に付けること</strong>を大切にしています。ただし、お客様の理解の妨げになるような技術の選定は望ましくありません。ヒアリングをした後にバランスを取ることもあり、黎明期からWebの世界を見ていたからこそできる対応もあります。</p>
+              </dd>
 					</dl>
 				</div>
 			</section>
@@ -241,17 +246,20 @@ import GrayScaleIcon from '../components/GrayScaleIcon.astro';
 		font-size: 24px;
 		font-weight: normal;
 		line-height: 24px;
+    -webkit-perspective: 500px;
+    perspective: 500px;
 	}
 	.features dl dt:not(:first-child) {
 		margin-top: 50px;
 	}
-  .features dl dt span {
+  .features dl dt .icon {
     display: inline-block;
+    position: relative;
     transition: transform 400ms;
     transform: rotateY(180deg);
     transform-origin: center;
   }
-  .features dl dt span[data-scrolled] {
+  .features dl [data-scrolled] dt .icon {
     transform: rotateY(360deg);
   }
 	.features dl dd {

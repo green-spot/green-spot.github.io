@@ -13,6 +13,8 @@ const { titleEn, titleJp } = Astro.props;
 <style>
   h2 {
     text-align: center;
+    -webkit-perspective: 500px;
+    perspective: 500px;
   }
   h2 span:first-child {
     display: block;
@@ -28,6 +30,7 @@ const { titleEn, titleJp } = Astro.props;
     transform: translate(0, 0);
   }
   h2 .icon {
+    display: inline-block;
     transition: transform 400ms;
     transform: rotateY(180deg);
     transform-origin: center;
