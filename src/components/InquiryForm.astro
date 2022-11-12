@@ -5,11 +5,11 @@ import Loading from "./Loading.astro"
 <form action="#" method="post" id="inquiry-form">
   <dl>
     <dt><label for="name-input">お名前</label></dt>
-    <dd><input type="text" name="name" id="name-input"></dd>
+    <dd><input type="text" name="name" id="name-input" required></dd>
     <dt><label for="email-input">メールアドレス</label></dt>
-    <dd><input type="text" name="email" id="email-input"></dd>
+    <dd><input type="email" name="email" id="email-input" required></dd>
     <dt><label for="message-textarea">お問い合わせ内容</label></dt>
-    <dd><textarea name="message" id="message-textarea"></textarea></dd>
+    <dd><textarea name="message" id="message-textarea" required></textarea></dd>
   </dl>
 
   <div class="button">
