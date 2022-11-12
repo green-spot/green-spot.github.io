@@ -7,5 +7,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://in-green-spot.com',
 	integrations: [mdx(), sitemap()],
-	server: {port: 3001}
+	server: {port: 3002}
 });

@@ -6,7 +6,6 @@
     window.addEventListener("scroll", () => {
       document.querySelectorAll(".animate").forEach((value, key, parent) => {
         const o = value as HTMLElement
-        console.log(value, o.offsetTop)
         if(o.offsetTop < html.scrollTop + html.clientHeight / 3){
           o.setAttribute("data-scrolled", "1")
         }
