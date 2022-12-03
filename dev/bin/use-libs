@@ -1,0 +1,57 @@
+#! /bin/bash
+
+dev_dir=$(cd $(dirname $0); pwd)/..
+project_dir=$dev_dir/..
+libs=$@
+parts_dir=
+
+# parts/の場所特定
+if [ -d $project_dir/wp/wp-content ]; then
+  for file in `ls $project_dir/wp/wp-content/themes`; do
+    if [ -d $project_dir/wp/wp-content/themes/$file/parts ]; then
+      parts_dir=$project_dir/wp/wp-content/themes/$file/parts
+    fi
+  done
+else
+  parts_dir=$project_dir/parts
+fi
+
+# ファイルの初期化
+rm -rf $project_dir/assets/js/libs/*
+rm -rf $project_dir/assets/scss/libs/*
+mkdir -p $parts_dir/libs/
+mkdir -p $project_dir/assets/js/libs/
+mkdir -p $project_dir/assets/scss/libs/
+echo -n "" > $parts_dir/libs/js.php
+echo -n "" > $project_dir/assets/scss/libs/index.scss
+
+for lib in ${libs[@]}; do
+  lib_dir=$dev_dir/tools/use-libs/$lib
+
+  # JS
+  if [ -d $lib_dir/js ]; then
+    for name in $(ls $lib_dir/js); do
+      if [ -f $lib_dir/js/$name ]; then
+        # JSファイルのコピー
+        cp $lib_dir/js/$name $project_dir/assets/js/libs/$name
+
+        # JSの読み込みタグ追加 (parts/libs/js.php)
+        echo "<script src=\"/assets/js/libs/$name\"></script>" >> $parts_dir/libs/js.php
+      fi
+    done
+  fi
+
+  # SCSS
+  if [ -d $lib_dir/scss ]; then
+    for name in $(ls $lib_dir/scss); do
+      if [ -f $lib_dir/scss/$name ]; then
+        # SCSSファイルのコピー
+        cp $lib_dir/scss/$name $project_dir/assets/scss/libs/$name
+
+        # SCSSの読み込み (libs/_index.scss)
+        scss_use_name=$(echo $name | sed -E "s/_?(.*)\.scss/\1/g")
+        echo "@use \"$scss_use_name\";" >> $project_dir/assets/scss/libs/index.scss
+      fi
+    done
+  fi
+done
