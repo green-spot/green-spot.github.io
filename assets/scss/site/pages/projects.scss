@@ -1,0 +1,32 @@
+@use "../../base/shortcut-functions" as f;
+@use "../modules" as modules;
+
+#projects {
+  main > section {
+    > section + section {
+      margin-top: 80px;
+    }
+
+    > section h3 {
+      font-size: 30px;
+      font-weight: normal;
+      line-height: 1em;
+    }
+
+    > section h3 span {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--main-color);
+      font-size: 18px;
+    }
+
+    > section p {
+      margin-top: 30px;
+    }
+  }
+}
+
+@include f.mq(sp) {
+  #projects {
+  }
+}

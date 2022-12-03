@@ -1,0 +1,87 @@
+@use "../../site/variables" as v;
+@use "sass:map";
+@use "sass:math";
+
+// general media query mixin
+@function get-mq-min-width($key) {
+  $width: 0;
+
+  @each $_key, $_width in v.$break-points {
+    @if $key == $_key {
+      @return $width;
+    }
+    $width: $_width + 1;
+  }
+
+  @return 0;
+}
+// メディアクエリを簡略化（variables.scssにも対応）
+@mixin mq-min($min-key, $media: screen) {
+  $min-width: get-mq-min-width($min-key);
+  @include mq-min-number(#{$min-width}px, $media) {
+    @content;
+  }
+}
+
+@mixin mq-min-number($min-width, $media: screen) {
+  @media #{$media} and (min-width: #{$min-width}) {
+    @content;
+  }
+}
+
+@mixin mq-max($max-key, $media: screen) {
+  $max-width: map.get(v.$break-points, $max-key);
+  @include mq-max-number(#{$max-width}px, $media) {
+    @content;
+  }
+}
+
+@mixin mq-max-number($max-width, $media: screen) {
+  @media #{$media} and (max-width: #{$max-width}) {
+    @content;
+  }
+}
+
+@mixin mq-minmax($min-key, $max-key, $media: screen) {
+  $min-width: get-mq-min-width($min-key);
+  $max-width: map.get(v.$break-points, $max-key);
+  @include mq-minmax-number(#{$min-width}px, #{$max-width}px, $media: screen) {
+    @content;
+  }
+}
+
+@mixin mq-minmax-number($min-width, $max-width, $media: screen) {
+  @media #{$media} and (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+    @content;
+  }
+}
+
+// tagged media query mixin
+
+@mixin mq($id, $media: screen) {
+  $max-width: map.get(v.$break-points, $id);
+
+  // min-widthを取得
+  $min-width: 0;
+  $prev-id: null;
+  @each $_id, $width in v.$break-points {
+    @if $id == $_id and $prev-id != null {
+      $min-width: (map.get(v.$break-points, $prev-id) + 1);
+    }
+    $prev-id: $_id;
+  }
+
+  @if $max-width == null {
+    @include mq-min($min-width, $media) {
+      @content;
+    }
+  } @else if $min-width == 0 {
+    @include mq-max($max-width, $media) {
+      @content;
+    }
+  } @else {
+    @include mq-minmax($min-width, $max-width, $media) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "green-spot/accela": "^0.1.1"
+    }
+}

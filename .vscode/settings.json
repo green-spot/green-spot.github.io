@@ -1,0 +1,41 @@
+{
+  // ▼デフォルトの文字コードを指定
+  "files.encoding": "utf8",
+  // ▼ファイルの文字コードを自動判定
+  "files.autoGuessEncoding": true,
+  // ▼改行コードを指定 LF
+  "files.eol": "\n",
+  // ▼1つのtabキーでのスペース数
+  "editor.tabSize": 2,
+  // ▼スペースが入力される設定
+  "editor.insertSpaces": true,
+  // ▼ファイル保存時にフォーマットさせる設定
+  "editor.formatOnSave": false,
+  // ▼prettierの文字数制御
+  "prettier.printWidth": 400,
+  // ▼ファイル別のフォーマッター設定
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.formatOnSave": true
+  },
+  "explorer.compactFolders": false,
+  // ▼スペースを視覚的に見やすくする
+  "editor.renderWhitespace": "all",
+  // ▼ファイルごとのインデント数を制御
+  "editor.detectIndentation": false,
+  // ▼行末やファイル末尾の空白文字を削除
+  "files.trimTrailingWhitespace": true,
+  // ▼左のエクスプローラーで.gitファイルを見えるようにする設定
+  "files.exclude": {
+    "**/.git": false
+  },
+  "emmet.preferences": {
+    "filter.commentAfter": "<!-- /[#ID][.CLASS] -->"
+  },
+  // ▼拡張機能のphp intelephenseの設定
+  "intelephense.stubs": ["wordpress"],
+}

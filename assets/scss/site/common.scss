@@ -1,0 +1,97 @@
+@use "../base/shortcut-functions" as f;
+@use "./modules" as modules;
+
+:root {
+	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
+	--main-color: #0C7139;
+	--main-color-dark: #114F2B;
+}
+
+html {
+  //@include f.rem-base-font-size;
+	padding-top: 40px;
+	color: #333;
+	font-family: Inder, 'IBM Plex Sans JP', sans-serif;
+	font-size: 16px;
+	line-height: 2em;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "palt";
+}
+
+a {
+	text-decoration: none;
+	color: #0775DA;
+}
+
+p {
+	text-align: justify;
+}
+
+p + p {
+	margin-top: 30px;
+}
+
+p a:hover {
+	text-decoration: underline;
+}
+
+p strong {
+	color: var(--main-color);
+	font-weight: bold;
+}
+
+i.icon {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-top: 12px solid var(--main-color);
+  border-left: 12px solid var(--main-color);
+  border-right: 12px solid var(--main-color-dark);
+  border-bottom: 12px solid var(--main-color-dark);
+  border-radius: 50% 0 50% 50%;
+  vertical-align: top;
+}
+
+i.icon.grayscale {
+  filter: grayscale(1);
+  opacity: .7;
+}
+
+main {
+	max-width: 860px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.common-section-title {
+	padding: 80px 0;
+	text-align: center;
+	color: var(--main-color);
+	font-size: 60px;
+	font-weight: normal;
+	line-height: 1em;
+}
+
+@include f.mq(sp) {
+	body {
+		line-height: 1.8em;
+	}
+
+	p + p {
+		margin-top: 25px;
+	}
+
+	main {
+		padding: 0 20px;
+	}
+
+	.common-section-title {
+		padding: 50px 0;
+		font-size: 30px;
+	}
+}
