@@ -1,15 +1,17 @@
-ACCELA.initPage = function(){
+/*
+ACCELA.initPage = () => {
   document.querySelector("body").classList.add("show")
 };
 
-ACCELA.movePage = function(page, move){
+ACCELA.movePage = (page, move)=> {
   move();
 };
+*/
 
-ACCELA.changePageContent = function(body, pageContent){
+ACCELA.changePageContent = (body, pageContent) => {
   body.innerHTML = "";
   body.appendChild(pageContent);
-  hljs.highlightAll();
+  if(window.hljs) hljs.highlightAll();
 };
 
 
