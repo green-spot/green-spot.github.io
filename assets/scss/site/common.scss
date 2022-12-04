@@ -29,6 +29,7 @@ a {
 
 p {
 	text-align: justify;
+  letter-spacing: .08em;
 }
 
 p + p {
@@ -66,6 +67,10 @@ main {
 	max-width: 860px;
 	margin: 0 auto;
 	padding: 0 30px;
+}
+
+#accela-layout main {
+  max-width: 1080px;
 }
 
 .common-section-title {

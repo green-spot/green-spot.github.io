@@ -10,7 +10,7 @@
     span:first-child {
       display: block;
       color: var(--main-color);
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1em;
       opacity: 0;
       transform: translate(0, 10px);
@@ -36,7 +36,7 @@
     span:last-child {
       display: block;
       color: #000;
-      font-size: 30px;
+      font-size: 26px;
       line-height: 1em;
     }
   }
@@ -51,145 +51,107 @@
 		max-width: 350px;
 	}
 
-  section {
-	}
-
-  section + section {
+  main > section + section {
 		margin-top: 100px;
 	}
 
-  section .body {
+  main > section .body {
 		margin-top: 50px;
 	}
 
-  .services details {
-    margin-top: 30px;
+  .about {
+    dl {
+		  margin: 40px 0 0;
+
+      div {
+        display: flex;
+        width: 400px;
+        margin: 0 auto;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+
+        dt {
+          width: 150px;
+          padding: 0 0 0 10px;
+          font-weight: normal;
+        }
+
+        dd {
+      		width: calc(100% - 150px);
+      		font-weight: 300;
+      	}
+      }
+    }
   }
 
-  .services details:first-child {
-		margin-top: 40px;
-	}
+  .features {
+    dl {
+      div:not(:first-child) {
+  		  margin-top: 50px;
+  	  }
 
-  .services details summary {
-    display: block;
-		position: relative;
-		padding: 15px 70px 15px 25px;
-		border-radius: 12px;
-		border-top-right-radius: 0;
-		color: var(--main-color);
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 30px;
-		cursor: pointer;
-		background-color: rgba(12, 113, 57, .15);
-		transition: background-color 200ms;
-	}
+      dt {
+        color: #000;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 24px;
+        -webkit-perspective: 500px;
+        perspective: 500px;
 
-  .services details summary::-webkit-details-marker {
-    display: none;
+        .icon-wrap {
+          display: inline-block;
+          position: relative;
+          transition: transform 400ms;
+          transform: rotateY(180deg);
+          transform-origin: center;
+        }
+      }
+
+      [data-scrolled] dt .icon-wrap {
+        transform: rotateY(360deg);
+      }
+
+      dd {
+    		margin-top: 20px;
+    	}
+    }
+
+    ul {
+  		margin-bottom: 20px;
+
+      li {
+    		list-style: disc;
+    		margin-left: 20px;
+    	}
+    }
   }
 
-  .services details summary:hover {
-		background-color: rgba(12, 113, 57, .1);
-	}
+  .projects {
+    section {
+      + section {
+        margin-top: 60px;
+      }
 
-  .services details summary div {
-		position: absolute;
-		top: calc(50% - 12px);
-		right: 20px;
-		width: 24px;
-		height: 24px;
-		opacity: .5;
-		transition: opacity 400ms;
-		transform-origin: center;
-	}
+      h3 {
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 1em;
+      }
 
-  .services details > div {
-    padding: 20px 5px 30px;
-    opacity: 0;
-    transform: scale(0.99);
-    transform-origin: center;
-    transition: opacity 600ms, transform 200ms;
-	}
-
-  .services details > div ul {
-		margin-bottom: 20px;
-	}
-
-  .services details > div ul li {
-		list-style: disc;
-		margin-left: 20px;
-	}
-
-  .services details[open] summary div {
-		opacity: 1;
-		transform: rotate(360deg);
-		transition: opacity 400ms, transform 400ms;
-	}
-
-  .services details[open] > div {
-    opacity: 1;
-    transform: scale(1);
+      p {
+        margin-top: 30px;
+      }
+    }
   }
 
-  .features dl div:not(:first-child) {
-		margin-top: 50px;
-	}
+  .inquiry .body {
+    > p {
+      text-align: center;
+    }
 
-  .features dl dt {
-		color: #000;
-		font-size: 24px;
-		font-weight: normal;
-		line-height: 24px;
-    -webkit-perspective: 500px;
-    perspective: 500px;
-	}
-
-  .features dl dt .icon-wrap {
-    display: inline-block;
-    position: relative;
-    transition: transform 400ms;
-    transform: rotateY(180deg);
-    transform-origin: center;
-  }
-
-  .features dl [data-scrolled] dt .icon-wrap {
-    transform: rotateY(360deg);
-  }
-
-  .features dl dd {
-		margin-top: 20px;
-	}
-
-  .information dl {
-		margin: 40px 0 0;
-	}
-
-  .information dl div {
-		display: flex;
-		width: 400px;
-		margin: 0 auto;
-		padding: 10px 0;
-		border-bottom: 1px solid #ddd;
-	}
-
-  .information dl div dt {
-		width: 150px;
-		padding: 0 0 0 10px;
-		font-weight: normal;
-	}
-
-  .information dl div dd {
-		width: calc(100% - 150px);
-		font-weight: 300;
-	}
-
-  .inquiry .body > p {
-    text-align: center;
-  }
-
-  .inquiry .body > div {
-    margin-top: 40px;
+    > div {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -209,46 +171,40 @@
   		padding: 150px 0 100px;
   	}
 
-    section + section {
+    main > section + section {
 	  	margin-top: 60px;
   	}
 
-    section .body {
+    main > section .body {
   		margin-top: 30px;
   	}
 
-    .services details:first-child {
-  		margin-top: 30px;
-  	}
-
-    .services details summary {
-      padding: 15px 60px 15px 25px;
-      font-size: 16px;
-      line-height: 28px;
-	  }
-
-    .features dl div:not(:first-child) {
-      margin-top: 30px;
-    }
-
-    .features dl dt {
-  		font-size: 18px;
-    }
-
-    .information dl {
+    .about dl {
   		margin: 30px 0 0;
-  	}
 
-    .information dl div {
-      width: 100%;
+      div {
+        width: 100%;
+
+        dt {
+          width: 120px;
+        }
+
+        dd {
+          width: calc(100% - 120px);
+        }
+      }
     }
 
-    .information dl div dt {
-      width: 120px;
-    }
+    .features {
+      dl {
+        div:not(:first-child) {
+          margin-top: 30px;
+        }
 
-    .information dl div dd {
-      width: calc(100% - 120px);
+        dt {
+      		font-size: 18px;
+        }
+      }
     }
   }
 }

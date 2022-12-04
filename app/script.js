@@ -9,6 +9,7 @@ ACCELA.movePage = function(page, move){
 ACCELA.changePageContent = function(body, pageContent){
   body.innerHTML = "";
   body.appendChild(pageContent);
+  hljs.highlightAll();
 };
 
 
@@ -151,3 +152,10 @@ ACCELA.modules.inquiryForm = (form) => {
     })
   })();
 }
+
+ACCELA.modules.documentNavToggle = (object) => {
+  object.addEventListener("click", () => {
+    const side = document.querySelector(".document-layout > nav");
+    side.classList.toggle("opened");
+  });
+};

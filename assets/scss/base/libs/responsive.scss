@@ -72,15 +72,15 @@
   }
 
   @if $max-width == null {
-    @include mq-min($min-width, $media) {
+    @include mq-min-number(#{$min-width}px, $media) {
       @content;
     }
   } @else if $min-width == 0 {
-    @include mq-max($max-width, $media) {
+    @include mq-max-number(#{$max-width}px, $media) {
       @content;
     }
   } @else {
-    @include mq-minmax($min-width, $max-width, $media) {
+    @include mq-minmax-number(#{$min-width}px, #{$max-width}px, $media) {
       @content;
     }
   }

@@ -1,0 +1,19 @@
+<head>
+  <server-component use="meta"
+    title="Accela PHP Web Framework - green spot"
+    description="PHP製のSPA用Webフレームワーク、Accelaの紹介ページです。"
+    path="/accela/">
+  </server-component>
+  <script src="/assets/js/highlight.min.js"></script>
+</head>
+
+<body>
+  <component use="AccelaLayout">
+    <div data-use-module="documentNavToggle" class="side-toggle"></div>
+    <server-component use="DocumentNav" @current-slug="current-slug"></server-component>
+
+    <div class="body">
+      <article data-use-module="unescape_markdown" data-bind-text="md"></article>
+    </div>
+  </component>
+</body>

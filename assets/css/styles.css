@@ -384,7 +384,7 @@ th {
   font-weight: bold;
 }
 
-@media screen and (max-width: px) {
+@media screen and (max-width: 750px) {
   .tb:not(.sp) {
     display: none;
   }
@@ -392,7 +392,7 @@ th {
     display: none;
   }
 }
-@media screen and (min-width: 0px) and (max-width: px) {
+@media screen and (min-width: 751px) and (max-width: 1280px) {
   .sp:not(.tb) {
     display: none;
   }
@@ -400,7 +400,7 @@ th {
     display: none;
   }
 }
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 1281px) {
   .sp:not(.pc) {
     display: none;
   }
@@ -408,6 +408,57 @@ th {
     display: none;
   }
 }
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 5px;
+}
+
+.hljs {
+  background: #fff;
+  color: #000;
+}
+
+.hljs-comment, .hljs-quote, .hljs-variable {
+  color: green;
+}
+
+.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-selector-tag, .hljs-tag {
+  color: #00f;
+}
+
+.hljs-addition, .hljs-attribute, .hljs-literal, .hljs-section, .hljs-string, .hljs-template-tag, .hljs-template-variable, .hljs-title, .hljs-type {
+  color: #a31515;
+}
+
+.hljs-deletion, .hljs-meta, .hljs-selector-attr, .hljs-selector-pseudo {
+  color: #2b91af;
+}
+
+.hljs-doctag {
+  color: grey;
+}
+
+.hljs-attr {
+  color: red;
+}
+
+.hljs-bullet, .hljs-link, .hljs-symbol {
+  color: #00b0e8;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
 :root {
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
@@ -435,6 +486,7 @@ a {
 
 p {
   text-align: justify;
+  letter-spacing: 0.08em;
 }
 
 p + p {
@@ -474,6 +526,10 @@ main {
   padding: 0 30px;
 }
 
+#accela-layout main {
+  max-width: 1080px;
+}
+
 .common-section-title {
   padding: 80px 0;
   text-align: center;
@@ -483,7 +539,7 @@ main {
   line-height: 1em;
 }
 
-@media screen and (max-width: px) {
+@media screen and (max-width: 750px) {
   body {
     line-height: 1.8em;
   }
@@ -505,7 +561,7 @@ main {
 #top .top-section-title span:first-child {
   display: block;
   color: var(--main-color);
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1em;
   opacity: 0;
   transform: translate(0, 10px);
@@ -527,7 +583,7 @@ main {
 #top .top-section-title span:last-child {
   display: block;
   color: #000;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1em;
 }
 #top .logo {
@@ -538,70 +594,30 @@ main {
   width: calc(100% - 60px);
   max-width: 350px;
 }
-#top section + section {
+#top main > section + section {
   margin-top: 100px;
 }
-#top section .body {
+#top main > section .body {
   margin-top: 50px;
 }
-#top .services details {
-  margin-top: 30px;
+#top .about dl {
+  margin: 40px 0 0;
 }
-#top .services details:first-child {
-  margin-top: 40px;
+#top .about dl div {
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
 }
-#top .services details summary {
-  display: block;
-  position: relative;
-  padding: 15px 70px 15px 25px;
-  border-radius: 12px;
-  border-top-right-radius: 0;
-  color: var(--main-color);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-  cursor: pointer;
-  background-color: rgba(12, 113, 57, 0.15);
-  transition: background-color 200ms;
+#top .about dl div dt {
+  width: 150px;
+  padding: 0 0 0 10px;
+  font-weight: normal;
 }
-#top .services details summary::-webkit-details-marker {
-  display: none;
-}
-#top .services details summary:hover {
-  background-color: rgba(12, 113, 57, 0.1);
-}
-#top .services details summary div {
-  position: absolute;
-  top: calc(50% - 12px);
-  right: 20px;
-  width: 24px;
-  height: 24px;
-  opacity: 0.5;
-  transition: opacity 400ms;
-  transform-origin: center;
-}
-#top .services details > div {
-  padding: 20px 5px 30px;
-  opacity: 0;
-  transform: scale(0.99);
-  transform-origin: center;
-  transition: opacity 600ms, transform 200ms;
-}
-#top .services details > div ul {
-  margin-bottom: 20px;
-}
-#top .services details > div ul li {
-  list-style: disc;
-  margin-left: 20px;
-}
-#top .services details[open] summary div {
-  opacity: 1;
-  transform: rotate(360deg);
-  transition: opacity 400ms, transform 400ms;
-}
-#top .services details[open] > div {
-  opacity: 1;
-  transform: scale(1);
+#top .about dl div dd {
+  width: calc(100% - 150px);
+  font-weight: 300;
 }
 #top .features dl div:not(:first-child) {
   margin-top: 50px;
@@ -626,24 +642,23 @@ main {
 #top .features dl dd {
   margin-top: 20px;
 }
-#top .information dl {
-  margin: 40px 0 0;
+#top .features ul {
+  margin-bottom: 20px;
 }
-#top .information dl div {
-  display: flex;
-  width: 400px;
-  margin: 0 auto;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+#top .features ul li {
+  list-style: disc;
+  margin-left: 20px;
 }
-#top .information dl div dt {
-  width: 150px;
-  padding: 0 0 0 10px;
+#top .projects section + section {
+  margin-top: 60px;
+}
+#top .projects section h3 {
+  font-size: 30px;
   font-weight: normal;
+  line-height: 1em;
 }
-#top .information dl div dd {
-  width: calc(100% - 150px);
-  font-weight: 300;
+#top .projects section p {
+  margin-top: 30px;
 }
 #top .inquiry .body > p {
   text-align: center;
@@ -652,7 +667,7 @@ main {
   margin-top: 40px;
 }
 
-@media screen and (max-width: px) {
+@media screen and (max-width: 750px) {
   #top .top-section-title span:first-child {
     font-size: 18px;
   }
@@ -662,19 +677,23 @@ main {
   #top .logo {
     padding: 150px 0 100px;
   }
-  #top section + section {
+  #top main > section + section {
     margin-top: 60px;
   }
-  #top section .body {
+  #top main > section .body {
     margin-top: 30px;
   }
-  #top .services details:first-child {
-    margin-top: 30px;
+  #top .about dl {
+    margin: 30px 0 0;
   }
-  #top .services details summary {
-    padding: 15px 60px 15px 25px;
-    font-size: 16px;
-    line-height: 28px;
+  #top .about dl div {
+    width: 100%;
+  }
+  #top .about dl div dt {
+    width: 120px;
+  }
+  #top .about dl div dd {
+    width: calc(100% - 120px);
   }
   #top .features dl div:not(:first-child) {
     margin-top: 30px;
@@ -682,37 +701,229 @@ main {
   #top .features dl dt {
     font-size: 18px;
   }
-  #top .information dl {
-    margin: 30px 0 0;
-  }
-  #top .information dl div {
-    width: 100%;
-  }
-  #top .information dl div dt {
-    width: 120px;
-  }
-  #top .information dl div dd {
-    width: calc(100% - 120px);
-  }
 }
-#projects main > section > section + section {
-  margin-top: 80px;
+#accela-document .document-layout {
+  display: flex;
+  justify-content: space-between;
 }
-#projects main > section > section h3 {
+#accela-document .document-layout nav {
+  width: 200px;
+}
+#accela-document .document-layout nav .get-started a {
+  display: block;
+  padding: 0 15px;
+  border-radius: 25px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 50px;
+  letter-spacing: 0.05em;
+  background-color: #000;
+  transition: color 200ms, background-color 200ms;
+}
+#accela-document .document-layout nav .get-started a:hover {
+  background-color: #666;
+}
+#accela-document .document-layout nav ul {
+  margin-top: 20px;
+}
+#accela-document .document-layout nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  line-height: 50px;
+}
+#accela-document .document-layout nav ul li a:hover, #accela-document .document-layout nav ul li a.current {
+  color: #b82b22;
+}
+#accela-document .document-layout nav ul li a::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 15px 0 0;
+  vertical-align: -3px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url(/assets/images/accela/icons/accela.png);
+  opacity: 0.3;
+  transition: opacity 200ms;
+}
+#accela-document .document-layout nav ul li a:hover::before, #accela-document .document-layout nav ul li a.current::before {
+  opacity: 1;
+}
+#accela-document .document-layout nav ul li.html a::before {
+  background-image: url(/assets/images/accela/icons/html.svg);
+}
+#accela-document .document-layout nav ul li.php a::before {
+  background-image: url(/assets/images/accela/icons/php.svg);
+}
+#accela-document .document-layout nav ul li.js a::before {
+  background-image: url(/assets/images/accela/icons/js.svg);
+}
+#accela-document .document-layout .body {
+  width: calc(100% - 240px);
+}
+#accela-document .document-layout .body article {
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.07em;
+}
+#accela-document .document-layout .body article h1 {
+  margin: 0 0 30px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #888;
+  color: #000;
   font-size: 30px;
   font-weight: normal;
-  line-height: 1em;
 }
-#projects main > section > section h3 span {
-  display: block;
-  margin-bottom: 5px;
-  color: var(--main-color);
-  font-size: 18px;
+#accela-document .document-layout .body article h1 + p code {
+  position: relative;
+  top: -15px;
+  display: inline-block;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  background-color: #333;
 }
-#projects main > section > section p {
-  margin-top: 30px;
+#accela-document .document-layout .body article h2 {
+  margin: 20px 0;
+  color: #000;
+  font-size: 30px;
+  font-weight: normal;
+}
+#accela-document .document-layout .body article h3 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+#accela-document .document-layout .body article h4 {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+#accela-document .document-layout .body article p + h2, #accela-document .document-layout .body article p + h3, #accela-document .document-layout .body article p + h4,
+#accela-document .document-layout .body article ul + h2, #accela-document .document-layout .body article ul + h3, #accela-document .document-layout .body article ul + h4,
+#accela-document .document-layout .body article ol + h2, #accela-document .document-layout .body article ol + h3, #accela-document .document-layout .body article ol + h4,
+#accela-document .document-layout .body article pre + h2, #accela-document .document-layout .body article pre + h3, #accela-document .document-layout .body article pre + h4,
+#accela-document .document-layout .body article div + h2, #accela-document .document-layout .body article div + h3, #accela-document .document-layout .body article div + h4 {
+  margin-top: 50px;
+}
+#accela-document .document-layout .body article a {
+  text-decoration: none;
+  color: #1768fd;
+}
+#accela-document .document-layout .body article a:hover {
+  text-decoration: underline;
+}
+#accela-document .document-layout .body article p {
+  margin: 20px 0;
+}
+#accela-document .document-layout .body article p code {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0 5px;
+  border-radius: 3px;
+  line-height: 1.5;
+  background-color: #ddd;
+}
+#accela-document .document-layout .body article p + p {
+  margin-top: -10px;
+}
+#accela-document .document-layout .body article pre {
+  border: 1px solid #999;
+  border-radius: 0 5px 5px 5px;
+  overflow: hidden;
+}
+#accela-document .document-layout .body article pre code {
+  font-family: "Source Code Pro", monospace !important;
+}
+#accela-document .document-layout .body article ul, #accela-document .document-layout .body article ol {
+  margin-left: 20px;
+}
+#accela-document .document-layout .body article ul li:not(:first-child), #accela-document .document-layout .body article ol li:not(:first-child) {
+  margin-top: 5px;
+}
+#accela-document .document-layout .body article ul ul, #accela-document .document-layout .body article ol ul {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+#accela-document .document-layout .body article ul {
+  list-style: disc;
+}
+#accela-document .document-layout .body article table {
+  border-collapse: collapse;
+}
+#accela-document .document-layout .body article table th, #accela-document .document-layout .body article table td {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background-color: #fdffff;
+  text-align: left;
+  vertical-align: top;
+}
+#accela-document .document-layout .body article table th {
+  font-weight: normal;
+  background-color: #eef8f8;
+}
+#accela-document .document-layout .body article .code-with-caption > p {
+  margin: 20px 0 0 -5px;
+}
+#accela-document .document-layout .body article .code-with-caption > p code {
+  padding: 5px 10px;
+  border-radius: 3px 3px 0 0;
+  color: #fff;
+  font-size: 12px;
+  line-height: 14px;
+  background-color: #333;
+}
+#accela-document .document-layout .body article .code-with-caption > pre {
+  margin-top: 0;
 }
 
+@media screen and (max-width: 750px) {
+  #accela-document .document-layout {
+    display: block;
+  }
+  #accela-document .document-layout .side-toggle {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 12px;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: #000;
+    z-index: 101;
+  }
+  #accela-document .document-layout .side-toggle::before {
+    content: "MENU";
+  }
+  #accela-document .document-layout nav {
+    position: absolute;
+    top: 40px;
+    left: -350px;
+    width: 300px;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 1;
+    transition: left 200ms;
+  }
+  #accela-document .document-layout nav.opened {
+    left: 0;
+  }
+  #accela-document .document-layout .body {
+    width: 100%;
+  }
+}
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -724,7 +935,7 @@ main {
   height: 40px;
   padding: 0 40px;
   background-color: var(--main-color-dark);
-  z-index: 1;
+  z-index: 2;
 }
 .site-header h1 a {
   color: #fff;
@@ -782,7 +993,7 @@ main {
   z-index: 0;
 }
 
-@media screen and (max-width: px) {
+@media screen and (max-width: 750px) {
   .contents-bg .overlay {
     opacity: 0;
   }
