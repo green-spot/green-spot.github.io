@@ -40,7 +40,7 @@ unescapeの処理を行ってからマークダウンをHTMLに変換するモ�
 
 `index.html`
 ```html
-<article data-use-module="unescape_markdown" data-bind-html="markdown_text">
+<article data-use-module="unescapeMarkdown" data-bind-html="markdown_text">
 </article>
 ```
 </div>
