@@ -4,7 +4,7 @@ function el($k, $v, $d=null) {
   return Accela\el($k, $v, $d);
 }
 
-function get_titles(){
+function get_accela_document_pages(){
   return [
     "structure" => ["ファイル構成", "accela"],
     "common-html" => ["サイトの共通情報", "html"],
@@ -24,3 +24,20 @@ function get_titles(){
     "dynamic-functions" => ["動的処理の比較", "accela"],
   ];
 }
+
+/*
+function get_articles(){
+  $url = "https://green-spot.cdn.newt.so/v1/blog/article?select=title,slug,_sys";
+  $ch = curl_init();
+
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Authorization: Bearer qRJQJ0V1xvG3MwZrQHjzo0FNY4y2jMkEUQUmDqJlxbM"
+  ]);
+  $articles = json_decode(curl_exec($ch));
+  curl_close($ch);
+
+  return $articles;
+}
+*/

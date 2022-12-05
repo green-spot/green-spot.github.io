@@ -1,0 +1,20 @@
+<component use="Layout" id="accela-document" class="lower">
+  <section>
+    <h2 class="common-section-title">Accela</h2>
+
+    <div class="document-layout">
+      <nav>
+        <div class="get-started">
+          <a href="/accela/#get-started">Get started</a>
+        </div>
+
+        <ul data-use-module="documentNav" data-bind="data-pages:accela-document-pages,data-current-slug:current-slug"></ul>
+      </nav>
+      <div data-use-module="documentNavToggle" class="side-toggle"></div>
+
+      <div class="body">
+        <article data-use-module="unescapeMarkdown" data-bind-text="md"></article>
+      </div>
+    </div>
+  </section>
+</component>

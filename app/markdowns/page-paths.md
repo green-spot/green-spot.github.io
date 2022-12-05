@@ -21,7 +21,7 @@ URLの一覧を登録するには、`app/page-init.php`内で`page_paths()`を�
 
 `page-init.php`
 ```php
-page_paths("/category/[slug]/", function(){
+Accela::page_paths("/category/[slug]/", function(){
   return [
     "/category/php/",
     "/category/node/",
@@ -38,7 +38,7 @@ page_paths("/category/[slug]/", function(){
 
 `page-init.php`
 ```php
-page_paths("/category/[slug]/", function(){
+Accela::page_paths("/category/[slug]/", function(){
   return array_map(function($c){
     return "/category/{$c->slug}/";
   }, SomeAPI::get_all_category());

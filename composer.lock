@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c82ede23a746b08eab8a17f8b8feb19f",
+    "content-hash": "b454ad662f86508165b5a86715bb5d9d",
     "packages": [
         {
             "name": "green-spot/accela",
-            "version": "v0.1.3",
+            "version": "v0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/green-spot/accela.git",
-                "reference": "bf72a9178490c4f0dd9616c08664f8d350871a6c"
+                "reference": "d4a28fa36462089002a459387d463c350878e34c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/green-spot/accela/zipball/bf72a9178490c4f0dd9616c08664f8d350871a6c",
-                "reference": "bf72a9178490c4f0dd9616c08664f8d350871a6c",
+                "url": "https://api.github.com/repos/green-spot/accela/zipball/d4a28fa36462089002a459387d463c350878e34c",
+                "reference": "d4a28fa36462089002a459387d463c350878e34c",
                 "shasum": ""
             },
             "type": "library",
@@ -44,9 +44,9 @@
             ],
             "support": {
                 "issues": "https://github.com/green-spot/accela/issues",
-                "source": "https://github.com/green-spot/accela/tree/v0.1.3"
+                "source": "https://github.com/green-spot/accela/tree/v0.1.4"
             },
-            "time": "2022-12-04T13:26:56+00:00"
+            "time": "2022-12-05T16:19:00+00:00"
         }
     ],
     "packages-dev": [],

@@ -19,13 +19,13 @@
 
 `page-init.php`
 ```php
-page_props("/category/[slug]/", function($query){
+Accela::page_props("/category/[slug]/", function($query){
   return [
     "slug" => $query["slug"],
   ];
 });
 
-page_props("/category/[slug]/[id]", function($query){
+Accela::page_props("/category/[slug]/[id]", function($query){
   return [
     "slug" => $query["slug"],
     "article_id" => $query["id"],
@@ -44,7 +44,7 @@ page_props("/category/[slug]/[id]", function($query){
 
 `page-init.php`
 ```php
-page_props("/", function(){
+Accela::page_props("/", function(){
   return [
     "key" => "value"
   ];
@@ -52,7 +52,22 @@ page_props("/", function(){
 ```
 </div>
 
-## 実際の使い方
+## Global Props
+Global Propsを使えば、全てのページ、全てのコンポーネントから参照できるPropsを作ることができます。
+
+<div class="code-with-caption">
+
+`page-init.php`
+```php
+Accela::global_props(function(){
+  return [
+    "key" => "value"
+  ];
+});
+```
+</div>
+
+## 具体的な使い方
 たとえば、カテゴリページで記事の一覧を表示したい場合、通常はAPIで取得した配列をループします。
 テンプレート、コンポーネントには制御構造がないため、Page Propsの中でHTMLを組み立てる必要があります。(※[モジュール](../modules/)と連携することもできます。)
 
@@ -60,7 +75,7 @@ page_props("/", function(){
 
 `page-init.php`
 ```php
-page_props("/category/[slug]/", function($query){
+Accela::page_props("/category/[slug]/", function($query){
   $category_slug = $query["slug"];
 
   $lis = array_map(function($article){

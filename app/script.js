@@ -153,7 +153,21 @@ ACCELA.modules.inquiryForm = (form) => {
       }
     })
   })();
-}
+};
+
+ACCELA.modules.documentNav = (ul) => {
+  const pages = JSON.parse(ul.getAttribute("data-pages"));
+  const currentSlug = ul.getAttribute("data-current-slug");
+  const isCurrent = currentSlug === "about";
+  const lis = [`<li class="accela"><a href="/accela/"${isCurrent ? ' class="current"' : ''}>Accelaとは</a></li>`];
+
+  Object.entries(pages).forEach(([slug, [title, type]]) => {
+    const isCurrent = currentSlug === slug;
+    lis.push(`<li class="${type}"><a href="/accela/${slug}/"${isCurrent ? ' class="current"' : ''}>${title}</a></li>`);
+  });
+
+  ul.innerHTML = lis.join("");
+};
 
 ACCELA.modules.documentNavToggle = (object) => {
   object.addEventListener("click", () => {

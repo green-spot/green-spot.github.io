@@ -8,12 +8,5 @@
 </head>
 
 <body>
-  <component use="AccelaLayout">
-    <server-component use="DocumentNav" @current-slug="current-slug"></server-component>
-    <div data-use-module="documentNavToggle" class="side-toggle"></div>
-
-    <div class="body">
-      <article data-use-module="unescape_markdown" data-bind-text="md"></article>
-    </div>
-  </component>
+  <component use="AccelaDocument" data-bind="current-slug,md"></component>
 </body>
