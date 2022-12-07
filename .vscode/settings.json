@@ -18,10 +18,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
-    "editor.formatOnSave": true
-  },
   "explorer.compactFolders": false,
   // ▼スペースを視覚的に見やすくする
   "editor.renderWhitespace": "all",

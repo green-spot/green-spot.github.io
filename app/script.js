@@ -175,3 +175,10 @@ ACCELA.modules.documentNavToggle = (object) => {
     side.classList.toggle("opened");
   });
 };
+
+ACCELA.modules.documentDetail = async (object) => {
+  const slug = object.getAttribute("data-slug");
+  const res = await fetch(`/api/accela/${slug}.md`);
+  object.innerHTML = await res.text();
+  ACCELA.modules.unescapeMarkdown(object);
+};
