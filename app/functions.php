@@ -19,6 +19,7 @@ function get_accela_document_pages(){
     "modules" => ["モジュール", "js"],
     "built-in-modules" => ["ビルトインモジュール", "js"],
     "js-hooks" => ["ページ移動時のフック", "js"],
+    "api" => ["API", "php"],
     "static-site-generation" => ["静的ビルド", "accela"],
     //"functions" => ["組み込み関数(PHP)", "php"],
     "dynamic-functions" => ["動的処理の比較", "accela"],
