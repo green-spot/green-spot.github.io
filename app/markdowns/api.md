@@ -12,7 +12,7 @@ APIとして定義したリソースは、静的ビルド対象になります�
 `page-init.php`
 ```php
 Accela::api("sample.json", function(){
-  return json_encode(["hello" => "accela"]);
+  echo json_encode(["hello" => "accela"]);
 });
 ```
 </div>
@@ -38,7 +38,7 @@ Accela::api_paths("blog/[slug].json", function(){
 });
 
 Accela::api("blog/[slug].json", function($query){
-  return BlogAPI::get("/article", ["slug" => $query["slug"]]);
+  echo BlogAPI::get("/article", ["slug" => $query["slug"]]);
 });
 ```
 </div>

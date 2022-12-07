@@ -11,7 +11,6 @@ ACCELA.movePage = (page, move)=> {
 ACCELA.changePageContent = (body, pageContent) => {
   body.innerHTML = "";
   body.appendChild(pageContent);
-  if(window.hljs) hljs.highlightAll();
 };
 
 
@@ -181,4 +180,5 @@ ACCELA.modules.documentDetail = async (object) => {
   const res = await fetch(`/api/accela/${slug}.md`);
   object.innerHTML = await res.text();
   ACCELA.modules.markdown(object);
+  if(window.hljs) hljs.highlightAll();
 };
