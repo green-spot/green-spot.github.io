@@ -24,6 +24,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -38,6 +40,9 @@ jobs:
         run: composer install
       - name: Build Accela
         run: php app/bin/build
+        env:
+          BLOG_API_URL: ${{secrets.BLOG_API_URL}}
+          BLOG_TOKEN: ${{secrets.BLOG_TOKEN}}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
