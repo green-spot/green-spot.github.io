@@ -9,11 +9,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# secrets
-env:
-  BLOG_API_URL: ${{secrets.BLOG_API_URL}}
-  BLOG_TOKEN: ${{secrets.BLOG_TOKEN}}
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -29,6 +24,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
