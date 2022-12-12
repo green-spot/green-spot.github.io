@@ -18,7 +18,7 @@
 - [サーバコンポーネント](../server-components/)
 
 ### /app/common.html
-サイト共通で使う、&lt;head /&gt;と&lt;style /&gt;を定義します。
+サイト共通で使う、&amp;lt;head /&amp;gt;と&amp;lt;style /&amp;gt;を定義します。
 - [サイトの共通情報](../common-html/)
 
 ### /app/page-init.php

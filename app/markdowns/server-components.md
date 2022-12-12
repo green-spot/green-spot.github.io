@@ -15,7 +15,7 @@
 
 ## 使うと便利なケース
 
-&lt;head /&gt;内の情報は、JavaScriptに対応していないクローラーに正確に伝えるため、あらかじめHTMLとして書いておく必要があります。
+&amp;lt;head /&amp;gt;内の情報は、JavaScriptに対応していないクローラーに正確に伝えるため、あらかじめHTMLとして書いておく必要があります。
 モジュールやバインディングを使った値の書き換えは、クライアントサイド(JavaScript)で行われるため、こういった問題に対応するためにサーバコンポーネントを使います。
 
 ## 例1 メタタグ
@@ -35,20 +35,20 @@
 
 
 ### サーバコンポーネントの使用
-サーバコンポーネントの使用には、独自タグ **&lt;server-component use="" /&gt;** を使用します。
+サーバコンポーネントの使用には、独自タグ **&amp;lt;server-component use="" /&amp;gt;** を使用します。
 このタグはコンポーネントと同様、レンダリング時にDOM上から無くなります。
 
 <div class="code-with-caption">
 
 `app/pages/index.html`
 ```html
-<head>
+&lt;head>
   <server-component use="meta"
     title="Accela PHP Web Framework"
     description="Accela is a PHP Framework that inspired by Next.js."
     keywords="accela,php,web framework,next.js">
   </server-component>
-</head>
+&lt;/head>
 ...
 ```
 </div>
@@ -59,13 +59,13 @@
 
 `app/pages/news/[id].html`
 ```html
-<head>
+&lt;head>
   <server-component use="meta"
     @title="title"
     @description="description"
     @keywords="keyword">
   </server-component>
-</head>
+&lt;/head>
 ...
 ```
 </div>

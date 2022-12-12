@@ -1,8 +1,8 @@
 # コンポーネント
 `app/components/*.html`
 
-レイアウトやナビゲーションなどの共通パーツは、コンポーネントとしてまとめることができ、テンプレート内で&lt;component /&gt;タグとして扱うことができます。
-コンポーネントの中身は、通常のHTMLタグと&lt;component /&gt;タグのみで構成されます。
+レイアウトやナビゲーションなどの共通パーツは、コンポーネントとしてまとめることができ、テンプレート内で&amp;lt;component /&amp;gt;タグとして扱うことができます。
+コンポーネントの中身は、通常のHTMLタグと&amp;lt;component /&amp;gt;タグのみで構成されます。
 
 コンポーネント、サーバコンポーネント、モジュールの違いは、[動的処理の比較](../dynamic-functions/)を参照してください。
 
@@ -24,7 +24,7 @@
 </div>
 
 ### コンポーネントの使用
-コンポーネントの使用には、独自タグ **&lt;component use="" /&gt;** を使用します。
+コンポーネントの使用には、独自タグ **&amp;lt;component use="" /&amp;gt;** を使用します。
 このタグは、レンダリング時にコンポーネントのHTMLに置換され、DOM上からは無くなります。
 
 <div class="code-with-caption">
@@ -32,11 +32,11 @@
 `app/pages/index.html`
 ```html
 ...
-<body>
+&lt;body>
   <div>
     <component use="nav"></component>
   </div>
-</body>
+&lt;/body>
 ```
 </div>
 
@@ -61,8 +61,8 @@
 
 ## 例2 レイアウト
 ### コンポーネント定義
-呼び出し元で&lt;component /&gt;タグ内にHTMLを書けば、コンポーネント内で`data-contents`プロパティを使って表示することができます。
-以下の例では、&lt;main /&gt;が置換される訳ではなく、&lt;main /&gt;内にコンテンツが埋め込まれます。
+呼び出し元で&amp;lt;component /&amp;gt;タグ内にHTMLを書けば、コンポーネント内で`data-contents`プロパティを使って表示することができます。
+以下の例では、&amp;lt;main /&amp;gt;が置換される訳ではなく、&amp;lt;main /&amp;gt;内にコンテンツが埋め込まれます。
 
 <div class="code-with-caption">
 
@@ -95,5 +95,5 @@
 
 ## 注意点
 
-最初に表示するページでは、&lt;head /&gt;タグ内を全て静的に書き出すため、&lt;head /&gt;内ではコンポーネントを使うことはできません。
+最初に表示するページでは、&amp;lt;head /&amp;gt;タグ内を全て静的に書き出すため、&amp;lt;head /&amp;gt;内ではコンポーネントを使うことはできません。
 代わりに[サーバコンポーネント](./server-components)を使ってください。

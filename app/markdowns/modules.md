@@ -27,7 +27,7 @@ ACCELA.modules.uppercase = (object) => {
 ```
 </div>
 
-引数の`object`には、**呼び出された&lt;div /&gt;のNodeオブジェクト**が渡されます。
+引数の`object`には、**呼び出された&amp;lt;div /&amp;gt;のNodeオブジェクト**が渡されます。
 
 ## 非同期
 `object`が保持されている間は、いつでもinnerHTMLの更新が可能なため、非同期な更新も実装できます。

@@ -136,7 +136,7 @@
           }
         }
 
-        p {
+        :not(pre) > p {
           margin: 20px 0;
 
           code {
@@ -149,7 +149,7 @@
           }
         }
 
-        p + p {
+        :not(pre) > p + p {
           margin-top: -10px;
         }
 
@@ -160,6 +160,10 @@
 
           code {
             font-family: 'Source Code Pro', monospace !important;
+          }
+
+          code + p code {
+            margin-top: -2em;
           }
         }
 

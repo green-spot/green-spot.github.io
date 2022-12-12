@@ -63,8 +63,8 @@ ACCELA.change_page_content = (body, pageContent) => {
 ```
 
 ### 第1引数
-Accelaで管理している、コンテンツ全体が含まれる仮想的な&lt;body /&gt;が渡されます。
-実際に渡されるのは&lt;div id="accela" /&gt;で、このDOMの中身を更新することでページ移動をしています。
+Accelaで管理している、コンテンツ全体が含まれる仮想的な&amp;lt;body /&amp;gt;が渡されます。
+実際に渡されるのは&amp;lt;div id="accela" /&amp;gt;で、このDOMの中身を更新することでページ移動をしています。
 
 ### 第2引数
 移動後のコンテンツが渡されます。

@@ -28,12 +28,12 @@ Accela is a PHP Web Framework that inspired by Next.js.
 
 unescapeの処理を行ってからマークダウンをHTMLに変換するモジュールです。
 
-&amp;lt; → &lt;<br>
-&amp;gt; → &gt;<br>
-&amp;amp; → &amp;<br>
-&amp;quot; → &quot;<br>
-&amp;#x27; → &#x27;<br>
-&amp;#x60; → &#x60;
+\&amp;lt; → &lt;<br>
+\&amp;gt; → &gt;<br>
+\&amp;amp; → &amp;<br>
+\&amp;quot; → &quot;<br>
+\&amp;#x27; → &#x27;<br>
+\&amp;#x60; → &#x60;
 
 
 <div class="code-with-caption">

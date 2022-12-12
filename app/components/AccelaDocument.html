@@ -5,7 +5,7 @@
     <div class="document-layout">
       <nav>
         <div class="get-started">
-          <a href="/accela/#get-started">Get started</a>
+          <a href="/accela/">Get started</a>
         </div>
 
         <ul data-use-module="documentNav" data-bind="data-pages:accela-document-pages,data-current-slug:current-slug"></ul>
@@ -13,7 +13,10 @@
       <div data-use-module="documentNavToggle" class="side-toggle"></div>
 
       <div class="body">
-        <article data-use-module="documentDetail" data-bind="data-slug:current-slug"></article>
+        <article>
+          <h1 data-bind-text="title"></h1>
+          <div data-use-module="documentDetail" data-bind="data-article-id:article-id"></div>
+        </article>
       </div>
     </div>
   </section>

@@ -7,5 +7,37 @@
 </head>
 
 <body>
-  <component use="AccelaDocument" data-bind="current-slug,md"></component>
+  <component use="Layout" id="accela-document" class="lower">
+    <section>
+      <h2 class="common-section-title">Accela</h2>
+
+      <div class="document-layout">
+        <nav>
+          <div class="get-started">
+            <a href="/accela/">Get started</a>
+          </div>
+
+          <ul data-use-module="documentNav" data-bind="data-pages:accela-document-pages,data-current-slug:current-slug"></ul>
+        </nav>
+        <div data-use-module="documentNavToggle" class="side-toggle"></div>
+
+        <div class="body">
+          <article>
+            <h1 data-bind-text="title">Accela</h1>
+
+            <h2>環境構築</h2>
+
+            <pre>
+              <code>$ composer require green-spot/accela
+$ cp -r vendor/green-spot/accela/accela/. ./</code>
+            </pre>
+
+            <a href="https://github.com/green-spot/accela" target="_blank">https://github.com/green-spot/accela</a>
+          </article>
+
+          <div data-use-module="hljs"></div>
+        </div>
+      </div>
+    </section>
+  </component>
 </body>

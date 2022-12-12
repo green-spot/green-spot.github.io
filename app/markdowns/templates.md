@@ -8,20 +8,20 @@ URLについての詳細は[ルーティング](../routing/)を参照。
 ## 基本テンプレート
 
 ```html
-<head>
+&lt;head>
   <title>Accela</title>
-</head>
+&lt;/head>
 
 <style>
   h1 {text-align: center;}
 </style>
 
-<body>
+&lt;body>
   <h1>Accela</h1>
-</body>
+&lt;/body>
 ```
 
-※&lt;head /&gt;と&lt;body /&gt;は必須です。<br>
+※&amp;lt;head /&amp;gt;と&amp;lt;body /&amp;gt;は必須です。<br>
 ※ルートに他のタグを置いても認識されません。
 
 ## head
@@ -29,15 +29,15 @@ URLについての詳細は[ルーティング](../routing/)を参照。
 - このページで使うCSS, JS
 - メタ情報
 
-など、ページ固有の&lt;head /&gt;を記述することができます。<br>
+など、ページ固有の&amp;lt;head /&amp;gt;を記述することができます。<br>
 ページを移動すると、そのページに合わせて自動的に更新されます。
 
 ## style
-全てのページテンプレートの&lt;style /&gt;が、最初のアクセス時にHTML上にインライン展開されます。
+全てのページテンプレートの&amp;lt;style /&amp;gt;が、最初のアクセス時にHTML上にインライン展開されます。
 
 ## body
 ページのコンテンツを記述します。
-テンプレート上では`<body />`ですが、内部的にはAccelaが作成した`<div id="accela" />`のinnerHTMLが更新されます。
+テンプレート上では`&lt;body /&gt;`ですが、内部的にはAccelaが作成した`<div id="accela" />`のinnerHTMLが更新されます。
 (が、この構造はあまり意識せずに開発できるようになっています。)
 
 

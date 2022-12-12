@@ -820,10 +820,10 @@ main {
 #accela-document .document-layout .body article a:hover {
   text-decoration: underline;
 }
-#accela-document .document-layout .body article p {
+#accela-document .document-layout .body article :not(pre) > p {
   margin: 20px 0;
 }
-#accela-document .document-layout .body article p code {
+#accela-document .document-layout .body article :not(pre) > p code {
   display: inline-block;
   margin: 0 5px;
   padding: 0 5px;
@@ -831,7 +831,7 @@ main {
   line-height: 1.5;
   background-color: #ddd;
 }
-#accela-document .document-layout .body article p + p {
+#accela-document .document-layout .body article :not(pre) > p + p {
   margin-top: -10px;
 }
 #accela-document .document-layout .body article pre {
@@ -841,6 +841,9 @@ main {
 }
 #accela-document .document-layout .body article pre code {
   font-family: "Source Code Pro", monospace !important;
+}
+#accela-document .document-layout .body article pre code + p code {
+  margin-top: -2em;
 }
 #accela-document .document-layout .body article ul, #accela-document .document-layout .body article ol {
   margin-left: 20px;

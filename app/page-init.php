@@ -13,15 +13,14 @@ define("HTML_LANG", "ja");
 
 Accela::global_props(function () {
   return [
-    "accela-document-pages" => get_accela_document_pages()
+    "accela-document-pages" => get_accela_document_pages(),
+    "blog-articles" => get_blog_articles()
   ];
 });
 
 // Accela
 Accela::page_props("/accela/", function () {
-  return [
-    "current-slug" => "about"
-  ];
+  return [];
 });
 
 Accela::page_paths("/accela/[slug]/", function () {
@@ -32,11 +31,14 @@ Accela::page_paths("/accela/[slug]/", function () {
 
 Accela::page_props("/accela/[slug]/", function ($query) {
   $slug = $query["slug"];
-  $file_path = APP_DIR . "/markdowns/{$slug}.md";
+  $page = get_accela_document_pages()[$slug];
+  $title = $page[0];
 
   return [
     "current-slug" => $slug,
-    "title" => get_accela_document_pages()[$slug][0] . " - Accela Document",
+    "title" => "${title} - Accela Document",
+    "title-raw" => $title,
+    "article-id" => $page[2],
     "path" => "/accela/{$slug}/"
   ];
 });
@@ -45,4 +47,21 @@ Accela::page_props("/accela/[slug]/", function ($query) {
 // Blog
 Accela::page_props("/blog/", function () {
   return [];
+});
+
+Accela::page_paths("/blog/article/[slug]/", function(){
+  return array_map(function($article){
+    return "/blog/article/{$article['slug']}/";
+  }, Accela::get_global_prop("blog-articles"));
+});
+
+Accela::page_props("/blog/article/[slug]/", function($query){
+  $articles = array_filter(Accela::get_global_prop("blog-articles"), function($article)use($query){
+    return $article["slug"] === $query["slug"];
+  });
+  $article = array_shift($articles);
+
+  return [
+    "article" => $article
+  ];
 });

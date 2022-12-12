@@ -1,7 +1,7 @@
 # サイトの共通情報
 `app/common.html`
 
-common.htmlには、サイト全体で共通する&lt;head /&gt;および&lt;style /&gt;を記述します。
+common.htmlには、サイト全体で共通する&amp;lt;head /&amp;gt;および&amp;lt;style /&amp;gt;を記述します。
 ここに書かれたHTMLは最初のアクセス時にレンダリングされ、ページの移動で更新されることはありません。
 
 ## 基本テンプレート
@@ -10,12 +10,12 @@ common.htmlには、サイト全体で共通する&lt;head /&gt;および&lt;sty
 
 `common.html`
 ```html
-<head>
+&lt;head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="icon" href="/favicon.png">
-</head>
+&lt;/head>
 
 <style>
 </style>
@@ -24,8 +24,8 @@ common.htmlには、サイト全体で共通する&lt;head /&gt;および&lt;sty
 
 ## head
 - (共通の)メタ情報
-- &lt;link&gt;
-- &lt;script&gt;&lt;/script&gt;
+- &amp;lt;link&amp;gt;
+- &amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;
 
 など。
 

@@ -157,8 +157,7 @@ ACCELA.modules.inquiryForm = (form) => {
 ACCELA.modules.documentNav = (ul) => {
   const pages = JSON.parse(ul.getAttribute("data-pages"));
   const currentSlug = ul.getAttribute("data-current-slug");
-  const isCurrent = currentSlug === "about";
-  const lis = [`<li class="accela"><a href="/accela/"${isCurrent ? ' class="current"' : ''}>Accelaとは</a></li>`];
+  const lis = [];
 
   Object.entries(pages).forEach(([slug, [title, type]]) => {
     const isCurrent = currentSlug === slug;
@@ -175,10 +174,36 @@ ACCELA.modules.documentNavToggle = (object) => {
   });
 };
 
+ACCELA.modules.hljs = (object) => {
+  setTimeout(() => hljs.highlightAll(), 100);
+};
+
 ACCELA.modules.documentDetail = async (object) => {
-  const slug = object.getAttribute("data-slug");
-  const res = await fetch(`/api/accela/${slug}.md`);
+  const id = object.getAttribute("data-article-id");
+  const res = await fetch(`/api/accela/${id}.md`);
   object.innerHTML = await res.text();
   ACCELA.modules.markdown(object);
   if(window.hljs) hljs.highlightAll();
+};
+
+ACCELA.modules.blogArticles = (object) => {
+  const articles = JSON.parse(object.getAttribute("data-articles")).map((article) => {
+    return `
+      <article>
+        <h2><a href="/blog/article/${article.slug}/">${article.title}</a></h2>
+        <time>${article.createdAt}</time>
+      </article>
+    `;
+  }).join("");
+
+  object.innerHTML = articles;
+};
+
+ACCELA.modules.blogArticle = async (object) => {
+  const _article = JSON.parse(object.getAttribute("data-article"));
+  object.innerHTML = _article.title;
+
+  const res = await fetch(`/api/blog/article/${_article.id}.json`);
+  const article = await res.json();
+  object.innerHTML = article.body;
 };
