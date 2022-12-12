@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/green-spot/accela.git",
-                "reference": "f87507a51f7553b1e483d24fb700d0cce5b98021"
+                "reference": "7d3eabcc1cd1554bdacb49b96556ce54880bc3da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/green-spot/accela/zipball/f87507a51f7553b1e483d24fb700d0cce5b98021",
-                "reference": "f87507a51f7553b1e483d24fb700d0cce5b98021",
+                "url": "https://api.github.com/repos/green-spot/accela/zipball/7d3eabcc1cd1554bdacb49b96556ce54880bc3da",
+                "reference": "7d3eabcc1cd1554bdacb49b96556ce54880bc3da",
                 "shasum": ""
             },
             "type": "library",
@@ -46,7 +46,7 @@
                 "issues": "https://github.com/green-spot/accela/issues",
                 "source": "https://github.com/green-spot/accela/tree/v0.1.5"
             },
-            "time": "2022-12-07T06:17:38+00:00"
+            "time": "2022-12-09T01:17:43+00:00"
         }
     ],
     "packages-dev": [],
@@ -57,5 +57,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
