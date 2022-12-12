@@ -3,9 +3,9 @@
 namespace Accela;
 
 Accela::api_paths("accela/[id].md", function () {
-  return array_map(function ($slug) {
-    return "accela/{$slug}.md";
-  }, array_keys(get_accela_document_pages()));
+  return array_map(function ($item) {
+    return "accela/{$item[2]}.md";
+  }, array_values(get_accela_document_pages()));
 });
 
 /*
