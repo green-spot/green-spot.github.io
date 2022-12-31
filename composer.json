@@ -1,5 +1,6 @@
 {
     "require": {
-        "green-spot/accela": "^0.1.5"
+        "green-spot/accela": "^0.1.5",
+        "green-spot/aproxi": "^0.1.1"
     }
 }

@@ -945,10 +945,18 @@ main {
 }
 .site-header nav ul {
   display: flex;
-  gap: 0 40px;
+  align-items: center;
+  gap: 0 15px;
+}
+.site-header nav ul li {
+  height: 24px;
+  line-height: 24px;
 }
 .site-header nav ul li a {
   color: #fff;
+}
+.site-header nav ul li a svg {
+  vertical-align: top;
 }
 
 .site-footer {

@@ -15,10 +15,10 @@ Accela::api("accela/about.md", function(){
 });
 */
 
-Accela::api("accela/[id].md", function($query){
+Accela::api("accela/[id].md", function ($query) {
   echo get_accela_document_article($query["id"]);
 });
 
 Accela::api("blog/article/[id].json", function($query){
-  echo json_encode(get_blog_article($query["id"]));
+  //echo json_encode(get_blog_article($query["id"]));
 });

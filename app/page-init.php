@@ -49,13 +49,15 @@ Accela::page_props("/blog/", function () {
   return [];
 });
 
-Accela::page_paths("/blog/article/[slug]/", function(){
+Accela::page_paths("/blog/article/[slug]/", function () {
+  return [];
   return array_map(function($article){
     return "/blog/article/{$article['slug']}/";
   }, Accela::get_global_prop("blog-articles"));
 });
 
-Accela::page_props("/blog/article/[slug]/", function($query){
+Accela::page_props("/blog/article/[slug]/", function ($query) {
+  return [];
   $articles = array_filter(Accela::get_global_prop("blog-articles"), function($article)use($query){
     return $article["slug"] === $query["slug"];
   });

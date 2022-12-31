@@ -2,4 +2,6 @@ vendor/
 dev/node_modules/
 out/
 env.php
+aproxi/cache/*
+!aproxi/cache/.gitkeep
 .DS_Store
