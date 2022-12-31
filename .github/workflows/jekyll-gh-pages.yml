@@ -41,8 +41,8 @@ jobs:
       - name: Build Accela
         run: php app/bin/build
         env:
-          BLOG_API_URL: ${{secrets.BLOG_API_URL}}
-          BLOG_TOKEN: ${{secrets.BLOG_TOKEN}}
+          NEWT_SPACE_UID: ${{secrets.NEWT_SPACE_UID}}
+          NEWT_BEARER_TOKEN: ${{secrets.NEWT_BEARER_TOKEN}}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
