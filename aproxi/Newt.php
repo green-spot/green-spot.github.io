@@ -9,7 +9,7 @@ class Newt extends ModuleBase {
         $url = "https://{$this->setting['spaceUid']}.cdn.newt.so/v1/accela-document/article";
         $query = [
           "select" => "_id,title,slug,type",
-          "order" => "-sys.customOrder"
+          "order" => "-_sys.customOrder"
         ];
         return $this->http_client->get($url, $query, "json");
 
