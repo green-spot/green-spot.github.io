@@ -649,17 +649,6 @@ main {
   list-style: disc;
   margin-left: 20px;
 }
-#top .projects section + section {
-  margin-top: 60px;
-}
-#top .projects section h3 {
-  font-size: 30px;
-  font-weight: normal;
-  line-height: 1em;
-}
-#top .projects section p {
-  margin-top: 30px;
-}
 #top .inquiry .body > p {
   text-align: center;
 }
@@ -702,6 +691,26 @@ main {
     font-size: 18px;
   }
 }
+#projects h2 {
+  margin: 80px 0;
+  text-align: center;
+  color: var(--main-color);
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1em;
+}
+#projects .projects section + section {
+  margin-top: 60px;
+}
+#projects .projects section h3 {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1em;
+}
+#projects .projects section p {
+  margin-top: 30px;
+}
+
 #accela-document .document-layout {
   display: flex;
   justify-content: space-between;

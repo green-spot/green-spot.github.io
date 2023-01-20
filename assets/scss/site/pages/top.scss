@@ -42,26 +42,26 @@
   }
 
   .logo {
-		padding: 250px 0 200px;
-		text-align: center;
-	}
+    padding: 250px 0 200px;
+    text-align: center;
+  }
 
   .logo img {
     width: calc(100% - 60px);
-		max-width: 350px;
-	}
+    max-width: 350px;
+  }
 
   main > section + section {
-		margin-top: 100px;
-	}
+    margin-top: 100px;
+  }
 
   main > section .body {
-		margin-top: 50px;
-	}
+    margin-top: 50px;
+  }
 
   .about {
     dl {
-		  margin: 40px 0 0;
+      margin: 40px 0 0;
 
       div {
         display: flex;
@@ -77,9 +77,9 @@
         }
 
         dd {
-      		width: calc(100% - 150px);
-      		font-weight: 300;
-      	}
+          width: calc(100% - 150px);
+          font-weight: 300;
+        }
       }
     }
   }
@@ -87,8 +87,8 @@
   .features {
     dl {
       div:not(:first-child) {
-  		  margin-top: 50px;
-  	  }
+        margin-top: 50px;
+      }
 
       dt {
         color: #000;
@@ -112,34 +112,16 @@
       }
 
       dd {
-    		margin-top: 20px;
-    	}
+        margin-top: 20px;
+      }
     }
 
     ul {
-  		margin-bottom: 20px;
+      margin-bottom: 20px;
 
       li {
-    		list-style: disc;
-    		margin-left: 20px;
-    	}
-    }
-  }
-
-  .projects {
-    section {
-      + section {
-        margin-top: 60px;
-      }
-
-      h3 {
-        font-size: 30px;
-        font-weight: normal;
-        line-height: 1em;
-      }
-
-      p {
-        margin-top: 30px;
+        list-style: disc;
+        margin-left: 20px;
       }
     }
   }
@@ -168,19 +150,19 @@
     }
 
     .logo {
-  		padding: 150px 0 100px;
-  	}
+      padding: 150px 0 100px;
+    }
 
     main > section + section {
-	  	margin-top: 60px;
-  	}
+      margin-top: 60px;
+    }
 
     main > section .body {
-  		margin-top: 30px;
-  	}
+      margin-top: 30px;
+    }
 
     .about dl {
-  		margin: 30px 0 0;
+      margin: 30px 0 0;
 
       div {
         width: 100%;
@@ -202,7 +184,7 @@
         }
 
         dt {
-      		font-size: 18px;
+          font-size: 18px;
         }
       }
     }
